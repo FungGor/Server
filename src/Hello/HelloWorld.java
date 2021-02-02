@@ -17,6 +17,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.net.Socket;
+import java.net.UnknownHostException;
 
 public class HelloWorld {
 	/**
@@ -53,6 +55,7 @@ public class HelloWorld {
 	
 	
 	private static void openConnection(String address)throws IOException{
+		//Open the stream connection with the bluetooth's MAC Address
 		StreamConnection connection = (StreamConnection)Connector.open(address);
 		if(connection == null)
 		{
@@ -61,10 +64,17 @@ public class HelloWorld {
 		}
 		System.out.println("Hello");
 		
-		//Initializes the streams
+		//Initializes the streams for Bluetooth's data Transmission
+		//Opens the output stream through the socket
 		OutputStream output = connection.openOutputStream();
+		//InputStreamReader receives the incoming data from the bluetooth
 		InputStreamReader isr = new InputStreamReader(System.in);
+		//BufferedReader reads the received incoming data from the bluetooth through isr
 		BufferedReader reader = new BufferedReader(isr);
+		
+		// Starts the listening service for incoming messages.
+		ExecutorService service = Executors.newSingleThreadExecutor();
+		service.submit(new IncomingMessagesLoggingRunnable(connection));
 		
 		System.out.println("Connection opened, type in console and press enter to send a message to: " + address);
 		LocalDevice localDevice = LocalDevice.getLocalDevice();
