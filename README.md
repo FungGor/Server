@@ -1,7 +1,7 @@
 # Server
 The server collects the data from the MCU board through Bluetooth network. It is written by Java using Bluecove Library
 
-When you want to use RFCOMM protocol to send or receive bluetooth data, choose option B
+When you want to use RFCOMM protocol to send or receive bluetooth data, choose option B.
 When you want to discovery the nearby BLE device, choose option B.
 
 In option B, the software allows users to send the data to the bluetooth devices (Client) such as Arduino Board, STM32 etc. 
