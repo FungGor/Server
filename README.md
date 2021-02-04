@@ -8,3 +8,6 @@ In option B, the software allows users to send the data to the bluetooth devices
 In the meantime, users in the client side could also send the data to the software through UART protocol. After receiving data from the client side, the software forwards the received data to the node.js server through Socket (Datagram) protocol. It is preferred that the target server IP address is 127.0.0.1 which is localhost. Furthermore, either 6969 or 51373 should be configed as the assigned port number which represents the communication between the client and server is using TCP and UDP service.
 
 It should be noted that it is a client. Therefore, Socket Class is used instead of ServerSocket Class. 
+
+For more information, please read the reference:
+http://tw.gitbook.net/java/java_networking.html
