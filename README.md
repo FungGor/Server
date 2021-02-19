@@ -10,6 +10,8 @@ In the meantime, users in the client side could also send the data to the softwa
 It should be noted that it is a client. Therefore, Socket Class is used instead of ServerSocket Class. 
 
 For more information, please read the reference:
-http://tw.gitbook.net/java/java_networking.html
-https://www.oracle.com/technical-resources/articles/javame/bluetooth-wireless-technology-part1.html
-https://www.oracle.com/technical-resources/articles/javame/bluetooth-wireless-technology-part2.html
+1. http://tw.gitbook.net/java/java_networking.html
+
+2. https://www.oracle.com/technical-resources/articles/javame/bluetooth-wireless-technology-part1.html
+
+3. https://www.oracle.com/technical-resources/articles/javame/bluetooth-wireless-technology-part2.html
