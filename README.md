@@ -11,3 +11,5 @@ It should be noted that it is a client. Therefore, Socket Class is used instead 
 
 For more information, please read the reference:
 http://tw.gitbook.net/java/java_networking.html
+https://www.oracle.com/technical-resources/articles/javame/bluetooth-wireless-technology-part1.html
+https://www.oracle.com/technical-resources/articles/javame/bluetooth-wireless-technology-part2.html
